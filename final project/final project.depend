@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1360929574 source:c:\users\eulogio\documents\c++\final project\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+
+1360928741 source:c:\users\pc\documents\c++\final project\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+
+1361026853 source:c:\users\eulogio\documents\c++\final project\src\project.cpp
+	"../include/project.h"
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+
+1361023560 c:\users\eulogio\documents\c++\final project\include\project.h
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+
