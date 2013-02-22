@@ -28,3 +28,30 @@
 	<cstdlib>
 	<fstream>
 
+1361544326 source:c:\users\pc\documents\github\project_eulogio_galinato\final project\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+	"include/project.h"
+
+1361543603 c:\users\pc\documents\github\project_eulogio_galinato\final project\include\project.h
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+
+1361544327 source:c:\users\pc\documents\github\project_eulogio_galinato\final project\src\project.cpp
+	"../include/project.h"
+	<iostream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<fstream>
+	<math.h>
+	<cmath>
+	<vector>
+	<algorithm>
+
