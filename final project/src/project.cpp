@@ -936,7 +936,141 @@ void project :: counting_sundays()
     cout << count << endl;
 }
 
-void project :: factorial_digit_sum()
+void factorial(vector<int> &, int);
+void  carryNum(vector<int> &);
+
+void carryNum(vector<int> & vect)
 {
-    cout << "none" << endl;
+    int carry = 0;
+    for(int i = 0; i < vect.size(); i++)
+    {
+        if( 9 < vect[i] )
+        {
+           if( i+1 == vect.size() )
+           {
+              vect.push_back(vect[i]/10);
+              vect[i] = vect[i]%10;
+           }
+           else
+           {
+               carry   = vect[i]/10;
+               vect[i] = vect[i]%10;
+               vect[i+1] += carry;
+           }
+        }
+    }
+}
+
+void factorial(vector<int> & vect, int num)
+{
+    for (int j = 0; j < vect.size(); j++)
+    {
+        vect[j] = vect[j] * num;
+    }
+    carryNum(vect);
+}
+
+
+int project :: factorial_digit_sum()
+{
+    int number    = 0;
+    int sumDigits = 0;
+    vector<int>     v1;
+
+    cout << "Enter a number: ";
+    cin >> number;
+    v1.push_back(number);
+
+    for(int i = 2; i < number; i++)
+    {
+        factorial(v1, i);
+    }
+
+    cout << endl << "Sum of these digits: " << endl;
+    for(int i = 0; i < v1.size(); i++)
+    {
+        sumDigits += v1[i];
+    }
+    cout << sumDigits << endl;
+
+    return 0;
+}
+
+void project :: name_scores()
+{
+    ifstream myfile;
+   string alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   string line, temp = "";
+   int range=alpha.length();
+   int rank=0;
+   int range_a=0;
+   int range_b=1;
+   int letter=0;
+   int prod=0;
+   int i_n=0;
+   unsigned long int sum = 0;
+   myfile.open ("names.txt");
+   getline(myfile,line);
+   myfile.close();
+   range_a = line.length();
+
+   for(int i=0; i<range_a; i++ )
+   {
+       if(line.at(i)==',')
+       {
+            range_b++;
+       }
+   }
+  string names[range_b];
+    for(int i = 1; i < range_a; i++)
+    {
+        if(line.at(i) == '"' || line.at(i) == ',')
+        {
+            if(temp != "")
+            {
+                names[i_n] = temp;
+                temp = "";
+                i_n++;
+            }
+            continue;
+        }
+        temp += line.at(i);
+    }
+
+    for(int i = 0; i < range_b; i++)
+    {
+        for(int j = 0; j < range_b;j++)
+        {
+            if(names[i] > names[j])
+            {
+                string temp_r = names[j];
+                names[j] = names[i];
+                names[i] = temp_r;
+            }
+        }
+    }
+
+
+	 for(int i = 0; i < range_b; i++)
+    {
+        letter = 0;
+        rank = range_b - i;
+        int range_c = names[i].length();
+        for(int m = 0; m < range_c; m++)
+        {
+            for(int n = 0; n < range; n++)
+            {
+                if(names[i].at(m) == alpha.at(n))
+                {
+                    letter += n + 1;
+                    break;
+                }
+            }
+        }
+
+        prod=rank*letter;
+        sum+=prod;
+        }
+
+    cout<<"The total of the name score is:" << sum << endl;
 }

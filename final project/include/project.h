@@ -30,7 +30,8 @@ class project
         int number_letter_counts();
         int max_path_sum_one();
         void counting_sundays();
-        void factorial_digit_sum();
+        int factorial_digit_sum();
+        void name_scores();
     protected:
     private:
 };

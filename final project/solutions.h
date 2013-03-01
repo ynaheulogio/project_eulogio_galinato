@@ -20,6 +20,7 @@
         int number_letter_counts();
         void max_path_sum_one();
         void counting_sundays();
-        void factorial_digit_sum();
+        int factorial_digit_sum();
+        void name_scores();
 
 #endif // SOLUTIONS_H_INCLUDED
