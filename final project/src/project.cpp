@@ -619,9 +619,52 @@ void project :: longest_collatz_sequence()
    cout << " with a chain length of " << max_chain << endl;
 }
 
+
+const int MAX_SOLUTIONS = 1000;
+typedef unsigned long long Long;
+int getSolution(Long n);
+
+int getSolution(Long  n)
+{
+
+    Long maxX = 2*n;
+    register int solutions=0;
+    Long differ;
+    long double y;
+    Long x;
+
+    for(x = n+1; x<=maxX; x++)
+    {
+        differ = x-n;
+
+            y = (x*n)/(long double)differ;
+            if((Long)y == y)
+            {
+                solutions++;
+            }
+
+    }
+
+
+
+    return solutions;
+}
+
 void project :: diophantine_reciprocals_a()
 {
-cout << "none" << endl;
+    int solutions = 0;
+    Long n=2*3*5*7*11*13;
+    Long x = 2*3*5*7*11*13;
+
+    while(solutions <= MAX_SOLUTIONS)
+    {
+
+        solutions = getSolution(n);
+        n+=x;
+    }
+
+    cout << n-x << endl;
+
 }
 
 int  x[302];
