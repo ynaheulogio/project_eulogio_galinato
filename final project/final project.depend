@@ -36,14 +36,14 @@
 	<fstream>
 	"include/project.h"
 
-1362153007 c:\users\pc\documents\github\project_eulogio_galinato\final project\include\project.h
+1363935297 c:\users\pc\documents\github\project_eulogio_galinato\final project\include\project.h
 	<iostream>
 	<string>
 	<sstream>
 	<cstdlib>
 	<fstream>
 
-1362153091 source:c:\users\pc\documents\github\project_eulogio_galinato\final project\src\project.cpp
+1363935524 source:c:\users\pc\documents\github\project_eulogio_galinato\final project\src\project.cpp
 	"../include/project.h"
 	<iostream>
 	<string>
@@ -54,4 +54,5 @@
 	<cmath>
 	<vector>
 	<algorithm>
+	<cstdio>
 

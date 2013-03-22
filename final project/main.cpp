@@ -33,9 +33,11 @@ const string PROBLEMS[]=
 "Counting Sundays",
 "Factorial digit sum",
 "Names scores",
+"1000-digit Fibonacci number",
+"Truncatable primes",
 "Exit"
 };
-const int NUM_PROBLEMS=21;
+const int NUM_PROBLEMS=23;
 const int EXIT=NUM_PROBLEMS +1;
 
 int main()
@@ -137,6 +139,14 @@ switch(ch)
 
     case 21:
 	proj.name_scores();
+	break;
+
+	case 22:
+	proj.first_1000_digit_fibonacci();
+	break;
+
+	case 23:
+	proj.truncable_primes();
 	break;
 
     case EXIT:

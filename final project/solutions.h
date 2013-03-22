@@ -22,5 +22,7 @@
         void counting_sundays();
         int factorial_digit_sum();
         void name_scores();
+        void first_1000_digit_fibonacci();
+        void truncable_primes();
 
 #endif // SOLUTIONS_H_INCLUDED
